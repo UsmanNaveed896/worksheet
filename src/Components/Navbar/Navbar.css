@@ -1,0 +1,84 @@
+body{
+  color: #616161!important;
+  height:100%;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+}
+.Navbar{
+  border-bottom:  1px solid #e6ecf5;
+}
+.main{
+padding: 0;
+}
+.brand-button{
+    margin-top: 4px;
+    background:none;
+    border: none;
+    font-size: 39px;
+    color:#757575;
+    cursor: pointer;
+  }
+  .sidebar{
+    position: absolute;
+    z-index: 444;
+    transition: all .5s;
+    transform: translateX(-45rem);
+    background-color: white;
+    border-right: 1px solid #e6ecf5;
+    height: 100%;
+  }
+  .close-button{
+    padding: 5px;
+    border-bottom:  1px solid #e6ecf5;
+    text-align: center;
+}
+.sidebar.open{
+    transform: translateX(0);
+    z-index: 444;
+  }
+  .sidebar-close-button{
+    color:#757575;
+    border: none!important;
+    float: right;
+    margin-top: -15px;
+    padding: .5rem;
+    font-size: 3rem;
+    padding-top: 0;
+    cursor: pointer;
+    background-color: white;
+  }
+  .signup-options ul li{
+    color:#757575;
+    font-size: 14px;
+    padding:8px;
+    list-style-type: none;
+    line-height: 30px;
+  }
+.signup-options ul{
+    padding: 0;
+}
+.brand{
+    padding-left: 0.5rem;
+    margin-left: 5px;
+}
+.dropdown-En{
+    margin-right:1rem;
+}
+.dropdown-quickacess{
+    margin-right:1rem;
+}
+button#dropdownMenuButton1 {
+  background-color: white;
+  color: #757575;
+  border:none;
+}
+.dropdown-icon{
+  margin-right:6px;
+  color: #757575;
+}
+.dropdown-item{
+  color: rgba(0,0,0,.87);
+  font-size: 14px;
+}
+img.logo-img {
+  max-width: 120px;
+}

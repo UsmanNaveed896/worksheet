@@ -1,0 +1,49 @@
+html{
+    height: 100%;
+}
+body{
+    color: #616161;
+    height:100%;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.page-title.container {
+    max-width: 91%;
+}
+.dashboard-main{
+    padding:20px;
+    background-color: #f0f0f0;
+    height: 100%;
+}
+.page-title h1{
+    margin-left:10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+}
+.icon i.fa.fa-user-circle {
+    font-size: 69px;
+    color:white;
+    margin-left: 5px;
+}
+.icon i.fa.fa-home.fa-lg {
+    font-size: 69px;
+    color:white;
+    margin-left: 10px;
+}
+.icon i.fa.fa-clock-o {
+    font-size: 69px;
+    color:white;
+    margin-left: 10px;
+}
+h5.e {
+    padding: 0px 0px 8px 0px;
+}
+.user-icon{
+    background-color: #F44336;
+}
+.clock-icon{
+    background-color: #4CAF50;
+}
+.home-icon{
+    background-color: #FFC107
+}
