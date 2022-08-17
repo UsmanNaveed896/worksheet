@@ -1,0 +1,16 @@
+
+.add-job.col-md-12.d-flex.justify-content-space-evenly {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.add-title.col-md-4 {
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+}
+.add-job .table-contents.col-md-7.mt-5 {
+    padding: 20px;
+}
+.save-btn button.btn-register-new.mt-4 {
+    float: right;
+}

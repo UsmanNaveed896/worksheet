@@ -1,0 +1,30 @@
+
+html{
+    height: 100%;
+}
+body{
+    color: #616161;
+    height:100%;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.update-account {
+    background-color:#f0f0f0;
+    height:100%;
+    padding: 30px;
+
+}
+.account-form{
+    background-color:#fff;
+    padding: 20px;
+}
+.form-update label{
+    color: #616161;
+    font-size: 14px;
+}
+.form-update input.form-control {
+    font-size: 14px;
+} 
+.update-account-btn button.btn.btn-secondary.mt-5 {
+    margin-left: 4px;
+}
+

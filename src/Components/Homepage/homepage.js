@@ -1,7 +1,8 @@
 import React from 'react'
 import '../Homepage/homepage.css'
-export default () => {
+export default (props) => {
     return (
+        
         <>
             <div className=" dashboard-main container-fluid">
               <div className="page-title container"><h1>Dashboard</h1></div>  

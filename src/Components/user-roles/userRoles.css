@@ -1,0 +1,84 @@
+html{
+    height: 100%;
+}
+body{
+    color: #616161;
+    height:100%;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.main-user{
+    background-color:#f0f0f0;
+    height:100%;
+}
+.page-title-main.container {
+    max-width: 1682px!important;
+}
+.heading-title h3{
+    margin-left:10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+button.return-add {
+    height: 41px;
+    padding: 0px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    margin-left: 2px;
+    background-color: #3399ff;
+}
+button.return-add:hover {
+    background-color:#4e54c8
+}
+.table-contents{
+background-color: #fff;
+}
+i.fa.fa-angle-left {
+    margin-right: 7px;
+    font-size: 18px; 
+}
+i.fa.fa-plus {
+    margin-right: 7px;
+    font-size: 14px; 
+}
+td.icons-crud {
+    cursor: pointer;
+    font-size: 14px;
+   width: 100%;
+    color: #616161;
+    float:right;
+}
+i.fa.fa-list {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+i.fa.fa-pencil-square-o {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+i.fa.fa-trash {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+.return-add i.fa.fa-user {
+    margin-right: 7px;
+    font-size: 14px; 
+}
+.float-right-icon{
+    float:right;
+}
+i.fa.fa-download {
+    margin-right: 7px;
+    font-size: 14px; 
+}
+.return-add i.fa.fa-clock-o {
+    margin-right: 7px;
+    font-size: 14px; 
+}

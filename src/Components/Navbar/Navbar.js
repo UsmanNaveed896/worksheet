@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from '../../Assets/logo.png'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 export default () => {
     const openMenu = () => {
@@ -27,14 +28,13 @@ export default () => {
                             <div className="sidebar-options">
                                 <div className="signup-options">
                                     <ul>
-                                        <li><i class="fa fa-sliders dropdown-icon" aria-hidden="true"></i>DASHBOARD</li>
+                                    <Link to="/" className="nav-link"> <li><i class="fa fa-sliders dropdown-icon" aria-hidden="true"></i>DASHBOARD</li></Link>
                                         <li><i class="fa fa-users dropdown-icon" aria-hidden="true"></i>EMPLOYEES</li>
-                                        <li><i class="fa fa-clock-o dropdown-icon" aria-hidden="true"></i>ATTENDANCES</li>
-                                        <li><i class="fa fa-calendar dropdown-icon" aria-hidden="true"></i>SCHEDULES</li>
+                                    <Link to="/attendance/" className="nav-link">  <li><i class="fa fa-clock-o dropdown-icon" aria-hidden="true"></i>ATTENDANCES</li></Link>
+                                         <li><i class="fa fa-calendar dropdown-icon" aria-hidden="true"></i>SCHEDULES</li>
                                         <li><i class="fa fa-calendar-plus-o dropdown-icon" aria-hidden="true"></i>LEAVES</li>
-                                        <li><i class="fa fa-bar-chart dropdown-icon" aria-hidden="true"></i>REPORTS</li>
-                                        <li><i class="fa fa-user dropdown-icon" aria-hidden="true"></i>USERS</li>
-                                        <li><i class="fa fa-cog dropdown-icon" aria-hidden="true"></i>SETTINGS</li>
+                                    <Link to="/userreport/  " className="nav-link">  <li><i class="fa fa-bar-chart dropdown-icon" aria-hidden="true"></i>REPORTS</li></Link> 
+                                    <Link to="/userdata/  " className="nav-link">    <li><i class="fa fa-user dropdown-icon" aria-hidden="true"></i>USERS</li></Link> 
                                     </ul>
                                 </div>
                             </div>
@@ -60,11 +60,11 @@ export default () => {
                                 <i class="fa fa-tint" aria-hidden="true"></i>   Quick access
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li class="dropdown-item"><i class="fa fa-clock-o dropdown-icon " aria-hidden="true"></i>Clock In/Out</li>
-                                    <li class="dropdown-item"><i class="fa fa-user-plus dropdown-icon" aria-hidden="true"></i>New Employee</li>
-                                    <li class="dropdown-item"><i class="fa fa-university dropdown-icon" aria-hidden="true"></i>Company</li>
-                                    <li class="dropdown-item"><i class="fa fa-cubes dropdown-icon" aria-hidden="true"></i>Department</li>
-                                    <li class="dropdown-item"><i class="fa fa-pencil dropdown-icon" aria-hidden="true"></i>Job Title</li>
+                                <Link to="/clock/" className="nav-link">     <li class="dropdown-item"><i class="fa fa-clock-o dropdown-icon " aria-hidden="true"></i>Clock In/Out</li></Link>
+                                    <li class="dropdown-item" ><i class="fa fa-user-plus dropdown-icon" aria-hidden="true"></i>New Employee</li>
+                                    <Link to="/adddcompany/" className="nav-link">     <li class="dropdown-item"><i class="fa fa-university dropdown-icon" aria-hidden="true"></i>Company</li></Link>
+                                    <Link to="/adddepartment/" className="nav-link"> <li class="dropdown-item"><i class="fa fa-cubes dropdown-icon" aria-hidden="true"></i>Department</li></Link>
+                                    <Link to="/addjob/" className="nav-link">  <li class="dropdown-item"><i class="fa fa-pencil dropdown-icon" aria-hidden="true"></i>Job Title</li></Link>  
                                     <li class="dropdown-item"><i class="fa fa-calendar dropdown-icon" aria-hidden="true"></i>Leave type</li>
                                 </ul>
                             </div>
@@ -74,9 +74,9 @@ export default () => {
                                 <i class="fa fa-user" aria-hidden="true"></i>  Gandhi Akash
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li class="dropdown-item"><i class="fa fa-user dropdown-icon " aria-hidden="true"></i>Update Account</li>
-                                    <li class="dropdown-item"><i class="fa fa-lock dropdown-icon" aria-hidden="true"></i>Change Password</li>
-                                    <li class="dropdown-item"><i class="fa fa-sign-in dropdown-icon" aria-hidden="true"></i>Switch to MyAccount</li>
+                                <Link to="/updateaccount/" className="nav-link">    <li class="dropdown-item"><i class="fa fa-user dropdown-icon " aria-hidden="true"></i>Update Account</li></Link>
+                                <Link to="/changepassword/" className="nav-link"> <li class="dropdown-item " ><i class="fa fa-lock dropdown-icon" aria-hidden="true"></i>Change Password</li></Link>
+                                    <li class="dropdown-item"><i class="fa fa-sign-in dropdown-icon" aria-hidden="true"></i>Switch to MyAccount</li>                
                                     <li class="dropdown-item"><i class="fa fa-power-off dropdown-icon" aria-hidden="true"></i>Logout</li>
                                 </ul>
                             </div>

@@ -47,6 +47,7 @@ padding: 0;
     background-color: white;
   }
   .signup-options ul li{
+    cursor: pointer;
     color:#757575;
     font-size: 14px;
     padding:8px;
@@ -62,8 +63,10 @@ padding: 0;
 }
 .dropdown-En{
     margin-right:1rem;
+    cursor: pointer;
 }
 .dropdown-quickacess{
+  cursor: pointer;
     margin-right:1rem;
 }
 button#dropdownMenuButton1 {
@@ -76,6 +79,7 @@ button#dropdownMenuButton1 {
   color: #757575;
 }
 .dropdown-item{
+  cursor: pointer;
   color: rgba(0,0,0,.87);
   font-size: 14px;
 }
