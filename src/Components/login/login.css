@@ -46,7 +46,6 @@ button.btn.btn-danger:hover
     vertical-align: middle;
 }
 input.form-control.form-control-lg {
-    display: block;
     margin: 0 0 0.28571429rem 0;
     font-size: .92857143em;
     text-transform: none;

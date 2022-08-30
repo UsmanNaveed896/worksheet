@@ -1,8 +1,39 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import '../user-roles/userRoles.css'
 
 
-export default () => {
+const Home = () => {
+let navigate=useNavigate();
+const[users,setUsers]=useState([])
+
+
+useEffect(()=>{
+loadUsers();
+},[])
+const loadUsers= async ()=>{
+   const result=await axios.get("https://dummyjson.com/products/add")
+    setUsers(result.data)
+}
+
+
+const[addUser,setaddUser]=useState({
+    name:"",
+    job:"",
+    id:"",
+});
+const oninputChange=(e)=>{
+    setaddUser({ [e.target.name]:[e.target.value]})
+}
+const onSubmit=async e=>{
+    e.preventDefault()
+    await axios.post ('https://dummyjson.com/products/add' ,addUser).then ((res)=>{
+        console.log(res,"ff")
+    })
+    navigate('/addroles/')
+}
+const{name,job,id}=addUser;
     return (
         <>
             <div className="main-user container-fluid">
@@ -22,22 +53,23 @@ export default () => {
                                             <h5 class="modal-title" id="myModalLabel">Add New Role</h5>
                                         </div>
                                         <div class="modal-body ">
-                                            <form>
+                                            <form >
                                                 <div class="form-group ">
                                                     <label class="mt-2" for="exampleInputPassword1 ">Role Name</label>
-                                                    <input type="text" class="form-control mt-1" i a placeholder="Enter Role Name" />
+                                                    <input type="text" class="form-control mt-1" i a placeholder="Enter Role Name" value={name} onChange={e=>oninputChange(e)} />
                                                 </div>
                                                 <label className=" mt-2" for="Text">Status</label>
-                                                <select class="selectpicker mt-2" title="Some placeholder text...">
+                                                <input type="text" class="form-control mt-1" i a placeholder="Enter status Name" value={job} onChange={e=>oninputChange(e)} />
+                                                {/* <select class="selectpicker mt-2" title="Some placeholder text...">
                                                     <option data-hidden="true">Select Status</option>
-                                                    <option>First</option>
+                                                    <option >First</option>
                                                     <option>Second</option>
-                                                </select>
+                                                </select> */}
 
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn-register-new" >Save</button>
+                                            <button type="submit" class="btn-register-new" onClick={e=>onSubmit(e)} >Save</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
@@ -46,9 +78,9 @@ export default () => {
 
                         </div>
                     </div>
-                </div>
+                
                 <div className="table-contents mt-5">
-                    <table class="table table-hover table-sm">
+                    <table class="table table-hover table-responsive table-sm">
                         <thead>
                             <tr>
                                 <th scope="col">Roll Name</th>
@@ -57,9 +89,12 @@ export default () => {
                             </tr>
                         </thead>
                         <tbody>
+                            {
+                                users.map((user , index)=>(  
                             <tr>
-                                <td>Employee</td>
-                                <td>Active</td>
+                        
+                                <td>{user.name}</td>
+                                <td>{user.job}</td>
                                 <td className="icons-crud">
                                     <div className="float-right-icon">
                                         <i class="fa fa-list" aria-hidden="true"></i>
@@ -68,6 +103,8 @@ export default () => {
                                     </div>
                                 </td>
                             </tr>
+                                 ) )                               
+                            }
                             <tr>
                                 <td>Manager</td>
                                 <td>Active</td>
@@ -82,8 +119,10 @@ export default () => {
                         </tbody>
                     </table>
                 </div>
+                </div>
             </div>
 
         </>
     )
 }
+export default Home;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route ,useLocation} from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar'
 import Homepage from './Components/Homepage/homepage'
 import Login from'./Components/login/login'
@@ -15,19 +15,25 @@ import AttendanceModal from './Components/Popups/Attendance-modal/Attendance-mod
 import Newuser from './Components/Popups/newusermodal/newuser'
 import Newrole from './Components/Popups/newRole/newrole';
 import Addjob from './Components/Add-job-title/addjob'
+import Employees from './Components/Employees/Employee'
 import Adddepartment from './Components/add-daprtment/adddepartment';
 import Addcompany from './Components/addcompany/adddcompany'
+import UserAuth from './Components/UserAuth'
 import '../src/App.css'
 function App() {
- 
+const location=useLocation();
   return (
     <>
-    <Router>
-    <Navbar/>
+    {/* <Login/> */}
+    {/* <Todolist/> */}
+    
+   
+    {(location.pathname !== "/login" && location.pathname !== "/clock/") && <Navbar/>} 
       <Routes>
-      < Route  exact path='/'  element={<Homepage/>}/>
+      < Route  exact path='/dashboard'  element={<Homepage/>}/>
         <Route path='/clock/'  element={<CheckIn/>}/>
         <Route path='/login/'  element={<Login/>}/>
+        <Route path='/employees/' element={<Employees/>}/>
         <Route path='/addroles/'  element={<Addroles/>}/>
         <Route path='/userdata/'  element={<Userdata/>}/>
         <Route path='/userreport/'  element={<Userreport/>}/>
@@ -38,7 +44,7 @@ function App() {
         <Route path='/adddepartment/'  element={<Adddepartment/>}/>
         <Route path='/adddcompany/'  element={<Addcompany/>}/>
       </Routes>
-    </Router>
+   
     
     </>
   );

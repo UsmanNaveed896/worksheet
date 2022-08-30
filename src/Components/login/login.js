@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import '../login/login.css'
-import Image from '../../Assets/logo.png'
-export default ()=>{
+import React, { useEffect,useState } from 'react';
+import '../login/login.css';
+import Image from '../../Assets/logo.png';
+import UserAuth from '../UserAuth';
+import {postApiService} from '../../Services/index'
+
+export default function Login () {
+const {http,setToken}=UserAuth();
+
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
 
@@ -12,20 +16,53 @@ export default ()=>{
     const handlePassword=(e)=>{
         setPassword(e.target.value)
     }
-
     const handleApi=(e)=>{
         e.preventDefault()
-        axios.post('https://reqres.in/api/login' ,{
+        http.get('/login/' ,{
             email :email,
             password:password
-        }).then(result=>{
-            console.log (result)
+        }).then((res)=>{
+            setToken(res.data)
+            console.log(res,"toe")
         })
-        .catch(error=>{
-            console.log(error)
-        })
-       
-    }
+// }
+ // let payLoad={
+        //        email :email,
+        //        password:password
+        // }
+        // postApiService('/login/' , payLoad)
+        // .then((res)=>{
+        //    setToken(res.data.token)
+        //    console.log(res,"toe")
+        // })
+    
+// const clickLogin=(e)=>{
+//     e.preventDefault();
+//     fetch("https://thetechgem.com/timeclock/api",{
+//         method:"POST",
+//         headers: {
+//             'Content-type': 'application/json',
+//         },
+//          body: JSON.stringify({
+//             email: 'myUserName',
+//             password: 'myPassword',
+//         })
+        
+//     })
+//     .then(response => response.json())
+    
+//     .then((data) => {
+        
+// setToken(data)
+// console.log(data,"")
+
+//     })
+    
+ }
+
+
+
+
     return(
         <>
          <div class="container-fluid main">
@@ -37,16 +74,16 @@ export default ()=>{
                         <img src={Image} alt="logo" />
                         <p className="leading mt-4" >Sign in to your account</p>
                       </div>  
-                    <form>  
+                    <form >  
                         <div class="form-group mt-5">
-                            <label className="labels">Email</label>
-                            <input type="Email" class="form-control form-control-lg" placeholder="Enter your e-mail address"
-                                name="Email" value={email} onChange={handleEmail}/>
+                            <label for="email_input" className="labels">Email</label>
+                            <input type="email" id="email" className="form-control form-control-lg"  placeholder="Enter your e-mail address"
+                                name="email" value={email} onChange={handleEmail}/>
                         </div>
                         <div class="form-group mt-4">
                             <label className="labels">Password</label>
-                            <input type="Password" class="form-control form-control-lg" placeholder="Enter your password"
-                                name="Enter Your Password" value={password} onChange={handlePassword}/>
+                            <input type="password" class="form-control form-control-lg" required placeholder="Enter your password"
+                                name="password" value={password} onChange={handlePassword}/>
                         </div>
                         <div class="form-check mt-2">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -63,4 +100,4 @@ export default ()=>{
     </div>
         </>
     )
-}
+    }

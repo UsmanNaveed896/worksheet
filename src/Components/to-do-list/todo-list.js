@@ -32,7 +32,7 @@ export default()=>{
                   <th>
                     {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                       alt="avatar 1" style="width: 45px; height: auto;"/> */}
-                    <span class="ms-2">Alice Mayer</span>
+                    <span class="ms-2">Akash Gandhi</span>
                   </th>
                   <td class="align-middle">
                     <span>Call Sam For payments</span>
@@ -51,7 +51,7 @@ export default()=>{
                   <th>
                     {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
                       alt="avatar 1" style="width: 45px; height: auto;"/> */}
-                    <span class="ms-2">Kate Moss</span>
+                    <span class="ms-2">Usman</span>
                   </th>
                   <td class="align-middle">Make payment to Bluedart</td>
                   <td class="align-middle">
@@ -68,7 +68,7 @@ export default()=>{
                   <th>
                     {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                       alt="avatar 1" style="width: 45px; height: auto;"/> */}
-                    <span class="ms-2">Danny McChain</span>
+                    <span class="ms-2">Iktedar</span>
                   </th>
                   <td class="align-middle">Office rent</td>
                   <td class="align-middle">
@@ -85,7 +85,7 @@ export default()=>{
                   <th>
                     {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
                       alt="avatar 1" style="width: 45px; height: auto;"/> */}
-                    <span class="ms-2">Alexa Chung</span>
+                    <span class="ms-2">Hassan</span>
                   </th>
                   <td class="align-middle">Office grocery shopping</td>
                   <td class="align-middle">

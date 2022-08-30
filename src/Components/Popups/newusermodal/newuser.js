@@ -64,7 +64,7 @@ export default () => {
                             <input type="password" class="form-control mt-2"   placeholder="Enter Current Password" />
                         </div>
                         <div class="form-group mt-3">
-                            <label  className=" mt-2" for="exampleInputEmail1">Current Password</label>
+                            <label  className=" mt-2" for="exampleInputEmail1">Confirm Password</label>
                             <input type="password" class="form-control mt-2 " style={{ "margin-left": "3px" }}  placeholder="Enter Current Password" />
                         </div>
                             </div>
